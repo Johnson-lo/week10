@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	 <input type="button" value="button1"
+	 onClick="alert('first botton')">
+	 <input type="button" value="button2"
+	 onClick="alert('second botton')">
+	 <input type="button" value="green"
+	 onClick="document.body.style.backgroundColor='green'">
+	 <input type="button" value="gray"
+	 onClick="document.body.style.backgroundColor='gray'">
+	 
+	 <script type="text/javascript">
+	 	
+	 	
+	 	
+	 	var value
+	 	var guessnum
+	 	
+	 	var guessNum
+	 	var againnum
+	 	var rand=Math.floor((Math.random()*10+1))
+
+	 	guessNum=window.prompt("please Enter the number from 1 to 10");
+	 	function judge(guessNum, rand)
+		
+	 		{
+	 			if (guessNum==rand){
+	 				value=1;
+	 			}
+	 			else
+	 				value=0;
+	 		return (value);
+	 		}
+	 	value = judge(guessNum, rand);
+
+	
+	 	while(value!=1){
+	 		againnum= window.prompt("please tyr again");
+	 		value=judge(againnum, rand);
+	 		if(value!=1){
+	 			continue;
+	 		}else{
+	 			document.write("<p>Congratulations");
+	 			break;
+	 		}
+	 	}
+
+
+	 	
+		
+	 
+	 </script>
+</html>
